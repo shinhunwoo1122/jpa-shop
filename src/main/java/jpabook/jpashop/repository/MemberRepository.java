@@ -1,6 +1,7 @@
 package jpabook.jpashop.repository;
 
 import jpabook.jpashop.domain.Member;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
@@ -10,10 +11,13 @@ import javax.persistence.PersistenceUnit;
 import java.util.List;
 
 @Repository
+@RequiredArgsConstructor
 public class MemberRepository {
 
-    @PersistenceContext
-    private EntityManager em;
+    private final EntityManager em;
+
+    /*@PersistenceContext
+    private EntityManager em; //entityManger 등록*/
 
     /*@PersistenceUnit
     private EntityManagerFactory emf; //EntityManagerFactory 주입받아 사용 할 수도 있음*/
