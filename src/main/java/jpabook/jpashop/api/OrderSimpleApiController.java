@@ -75,16 +75,11 @@ public class OrderSimpleApiController {
             orderStatus = order.getStatus();
             address = order.getDelivery().getAddress();
         }
-
     }
-
 
     @GetMapping("/api/v4/simple-orders")
     public List<OrderSimpleQueryDto> orderV4(){
         return orderRepository.findOrderDtos();
     }
-
-
-
 
 }
