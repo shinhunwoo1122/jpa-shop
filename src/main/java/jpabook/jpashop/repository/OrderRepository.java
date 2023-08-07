@@ -113,6 +113,8 @@ public class OrderRepository {
                 .getResultList();
     }
 
+
+
     public List<Order> findAllWithMemberDelivery1(int offset, int limit) {
         return em.createQuery(
                         "select o from Order o" +
