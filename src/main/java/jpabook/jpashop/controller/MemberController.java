@@ -2,7 +2,7 @@ package jpabook.jpashop.controller;
 
 import jpabook.jpashop.domain.Address;
 import jpabook.jpashop.domain.Member;
-import jpabook.jpashop.service.MemberService;
+import jpabook.jpashop.service.MemberServiceOld;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -17,7 +17,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class MemberController {
 
-    private final MemberService memberService;
+    private final MemberServiceOld memberService;
 
 
     @GetMapping("/members/new")

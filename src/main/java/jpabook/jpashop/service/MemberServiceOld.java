@@ -12,9 +12,9 @@ import java.util.List;
 @Service
 @Transactional(readOnly = true)
 @RequiredArgsConstructor
-public class MemberService {
+public class MemberServiceOld {
 
-    private final MemberRepository memberRepository;
+    private final MemberRepositoryOld memberRepository;
 
     //회원가입
     @Transactional
@@ -38,13 +38,13 @@ public class MemberService {
     }
     //단건 조회
     public Member findOne(Long memberId){
-        return memberRepository.findById(memberId).get();
+        return memberRepository.findOne(memberId);
     }
 
 
     @Transactional
     public void update(Long id, String name) {
-        Member member = memberRepository.findById(id).get();
+        Member member = memberRepository.findOne(id);
         member.setName(name);
     }
 }
