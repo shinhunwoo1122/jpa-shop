@@ -21,6 +21,9 @@ public class OrderQueryDto {
 
 
 
+
+
+
     public OrderQueryDto(Long orderId, String name, LocalDateTime orderDate, OrderStatus orderStatus, Address address) {
         this.orderId = orderId;
         this.name = name;
